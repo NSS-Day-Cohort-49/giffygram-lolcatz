@@ -1,4 +1,4 @@
-const apiURL = "http://localhost:8088"
+const apiURL = "http://localhost:3000"
 const applicationElement = document.querySelector(".giffygram")
 
 
@@ -16,22 +16,33 @@ const applicationState = {
 }   
 
 
-export const fetchExternalData = () => {
-    return Promise.all([
-    fetch(`${apiURL}/users`)
-    ])
-        .then(responses => {
-            return Promise.all(responses.map(response => {
-                return response.json()
-            }))
-        }) 
-        .then(externalData => {
-            // Store the external state in application state
-            applicationState.users = externalData[0]
+// export const fetchExternalData = () => {
+//     return Promise.all([
+//     fetch(`${apiURL}/users`) // problem here
+//     ])
+//         .then(responses => {
+//             return Promise.all(responses.map(response => {
+//                 return response.json()
+//             }))
+//         }) 
+//         .then(externalData => {
+//             // Store the external state in application state
+//             applicationState.users = externalData[0]
  
-        })
+//         })
+// }
+
+
+export const fetchUsers = () => {
+    return fetch(`${apiURL}/users`)
+        .then(response => response.json())
+        .then(
+            (users) => {
+                applicationState.users = users
+            }
+        )
 }
 
 export const getUsers = () => {
-    return applicationState.users.map(user =>({...user}))
+    return applicationState.users.map(user => ({...user}))
 }
