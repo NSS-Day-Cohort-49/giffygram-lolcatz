@@ -3,6 +3,7 @@ import { LoginForm } from "./auth/Login.js"
 // import { fetchExternalData } from "./data/provider.js"
 import { fetchUsers } from "./data/provider.js"
 
+
 const applicationElement = document.querySelector(".giffygram")
 
 export const renderApp = () => {
@@ -11,7 +12,7 @@ export const renderApp = () => {
     // fetchExternalData()
     fetchUsers()
         .then(()=> {
-            if (user) {
+            if (!user) {
                 applicationElement.innerHTML = GiffyGram()
             } else {
                 applicationElement.innerHTML = LoginForm()
