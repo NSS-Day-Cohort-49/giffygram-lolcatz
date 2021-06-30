@@ -1,6 +1,6 @@
 import { getUsers } from "../data/provider.js"
 
-
+// Event Listener for log-in button listens for id "loginButton".
 document.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "loginButton") {
         let foundUser = null
@@ -22,20 +22,28 @@ document.addEventListener("click", clickEvent => {
     }
 })
 
+// HTML text for Login Form - 
 export const LoginForm = () => {
     return `
-        <div class="loginForm">
-            <form>
-                <fieldset>
-                    <label for="email">Email:</label>
-                    <input type="text" name="email" autofocus placeholder="Email address" />
-                </fieldset>
-                <fieldset>
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" placeholder="Password" />
-                </fieldset>
-            </form>
-            <button id="loginButton">Login</button>
-        </div>
+    <div class="loginForm">
+    <form>
+    <fieldset>
+    <label for="email">Email:</label>
+    <input type="text" name="email" autofocus placeholder="Email address" />
+    </fieldset>
+    <fieldset>
+    <label for="password">Password:</label>
+    <input type="password" name="password" placeholder="Password" />
+    </fieldset>
+    </form>
+    <button id="loginButton">Login</button>
+    </div>
     `
 }
+
+document.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "logoutLink"){
+        localStorage.setItem("gg_user", null)    
+        document.querySelector(".giffygram").dispatchEvent(new CustomEvent("stateChanged"))
+    }
+})
