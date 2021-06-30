@@ -46,3 +46,37 @@ export const fetchUsers = () => {
 export const getUsers = () => {
     return applicationState.users.map(user => ({...user}))
 }
+
+
+
+// Post Http Request
+export const sendMessage = (messageContent) => {
+    const fetchOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(messageContent)
+    }
+
+    return fetch(`${apiURL}/messages`, fetchOptions)
+        .then(response => response.json())
+        .then(() => {
+            alert("Your Message Has Been Sent! :D");
+            applicationElement.dispatchEvent(new CustomEvent("stateChanged"))
+        })
+};
+
+
+export const savePendingMessage = (messageContent) => {
+    const fetchOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(messageContent)
+    }
+
+    return fetch(`${apiURL}/pendingMessages`, fetchOptions)
+        .then(response => response.json());
+};
