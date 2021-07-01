@@ -12,7 +12,7 @@ export const renderApp = () => {
     // fetchExternalData()
     fetchUsers()
         .then(()=> {
-            if (!user) {
+            if (user) {
                 applicationElement.innerHTML = GiffyGram()
             } else {
                 applicationElement.innerHTML = LoginForm()
