@@ -2,6 +2,7 @@ import { deletePendingMessage, fetchPendingMessages, getUserPendingMessages } fr
 import { returnNavbar } from "./nav/Navbar.js"
 import { pendingMessages } from "./message/pendingMessages.js";
 import { renderApp } from "./main.js";
+import { giffyPosts } from "./feed/PostList.js";
 
 const applicationElement = document.querySelector(".giffygram")
 
@@ -46,6 +47,13 @@ applicationElement.addEventListener("pendingMessagesCounterIsClicked", (CustomEv
 export const GiffyGram = () => {
    
     // Show main main UI\
-    return `${returnNavbar()}`
+    return `
+    <div>
+        ${returnNavbar()}
+    </div>
+    <section>
+        ${giffyPosts()}
+    </section>
+    `
 }
 

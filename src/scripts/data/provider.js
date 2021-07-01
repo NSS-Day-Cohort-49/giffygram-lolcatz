@@ -48,6 +48,19 @@ export const getUsers = () => {
     return applicationState.users.map(user => ({...user}))
 }
 
+export const fetchPosts = () => {
+    return fetch(`${apiURL}/posts`)
+        .then(response => response.json())
+        .then(
+            (posts) => {
+                applicationState.posts = posts
+            }
+        )
+}
+
+export const getPosts = () => {
+    return applicationState.posts.map(post => ({...post}))
+}
 
 
 // Post Http Request
