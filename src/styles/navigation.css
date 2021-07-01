@@ -64,3 +64,46 @@
 #directMessageIcon {
     cursor: pointer;
 }
+
+
+#logo {
+    height: 130px;
+    width: 130px;
+    border-radius: 30%;
+    flex-basis:  1;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+#pendingMessagesCounter {
+    color: goldenrod;
+    background-color: rgb(217, 230, 243);
+    padding: 6px; 
+    border-radius: 20px;
+    margin-top: 60px;
+    margin-left: 500px;
+    flex-basis: 2;
+    font-family: cursive;
+}
+
+.button {
+    color: goldenrod;
+    background-color: rgb(217, 230, 243);
+    padding: 6px; 
+    border-radius: 100px;
+    font-family: cursive;
+}
+
+nav {
+    display: flex;
+}
+
+#pendingMessagesCounter:hover {
+    color: slategray;
+    background-color: rgb(240, 209, 130)
+}
+
+.button:hover {
+    color: slategray;
+    background-color: rgb(240, 209, 130) 
+}
