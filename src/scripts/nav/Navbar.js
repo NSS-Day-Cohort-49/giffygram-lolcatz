@@ -31,6 +31,7 @@ export const  returnNavbar = () => {
             <div class="logo_pic">
             <img id="logo" src="../../images/giffy_logo.PNG"/>
             </div>
+            <img id="directMessageIcon" src="../../images/pencilTransparent.png" alt="DM" />
             <div>
             <button id="pendingMessagesCounter">Pending Messages: ${countPendingMessages()}</button>
             </div>
@@ -40,3 +41,4 @@ export const  returnNavbar = () => {
 
 
 // <button id="logo">Logo</button>
+

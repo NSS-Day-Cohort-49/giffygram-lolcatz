@@ -71,8 +71,8 @@
     width: 130px;
     border-radius: 30%;
     flex-basis:  1;
-    margin-left: 100px;
-    margin-top: 10px;
+    margin-left: 30px;
+    margin-top: 5px;
 }
 
 #pendingMessagesCounter {
@@ -84,6 +84,7 @@
     margin-left: 500px;
     flex-basis: 2;
     font-family: cursive;
+    padding: 1em;
 }
 
 .button {
@@ -92,6 +93,8 @@
     padding: 6px; 
     border-radius: 100px;
     font-family: cursive;
+    margin-right: 50px;
+    margin-top: 10px;
 }
 
 nav {
@@ -106,4 +109,26 @@ nav {
 .button:hover {
     color: slategray;
     background-color: rgb(240, 209, 130) 
+}
+
+#msg_history:hover {
+    color: slategray;
+    background-color: rgb(240, 209, 130) 
+}
+
+
+#logoutLink {
+    color: goldenrod;
+    background-color: rgb(217, 230, 243);
+    padding: 6px; 
+    border-radius: 100px;
+    font-family: cursive;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+
+#directMessageIcon {
+    height: 50px;
+    width: 50px;
 }
