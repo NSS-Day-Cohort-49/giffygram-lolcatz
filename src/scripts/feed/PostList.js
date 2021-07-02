@@ -8,7 +8,7 @@ export const giffyPosts = () => {
 let html = `<div>${posts.map(post => {
     return `
     <section name="posts" class ="post" value="${post.id}">
-        <h2 class="post_title">"${post.title}"></h2>
+        <h2 class="post_title">"${post.title}"</h2>
         <img class="post_pic" src="${post.imageURL}">
         <div class="post_idea">${post.description}</div>
     </section>`

@@ -57,3 +57,29 @@ h1, h2, h3, h4, h5, h6 {
     height: 300px;
     width: 350px;
 }
+
+
+#showPostForm {
+    display: flex;
+    justify-content: center;
+    margin-left: 500;
+    color: goldenrod;
+    background-color: rgb(217, 230, 243);
+    padding: 6px; 
+    border-radius: 20px;
+    margin-top: 60px;
+    margin-right: 2em;
+    font-family: cursive;
+}
+
+.giffButton {
+    display: flex;
+    justify-content: center;
+    
+}
+
+#showPostForm:hover {
+    color: slategray;
+    background-color: rgb(240, 209, 130) 
+}
+
