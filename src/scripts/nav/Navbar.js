@@ -31,12 +31,13 @@ export const  returnNavbar = () => {
             <div class="logo_pic">
             <img id="logo" src="../../images/giffy_logo.PNG"/>
             </div>
-            <div>
-            <button id="pendingMessagesCounter">Pending Messages: ${countPendingMessages()}</button>
-            </div>
-            <button class="button" id="logoutLink">Log Out</button>
+            <img id="directMessageIcon" src="../../images/pencilTransparent.png" alt="DM" />
+            <div class="navDiv"><button id="pendingMessagesCounter">Pending Messages: ${countPendingMessages()}</button>
+            <button class="button" id="logoutLink">Log Out</button></div>
+            
     </nav>`
 }
 
 
 // <button id="logo">Logo</button>
+

@@ -32,7 +32,7 @@ function validateForm() {
  }
  export const postForm = () => {
     return (
-    `<button id="showPostForm">Have a GIF to post?</button>
+    `<div class="giffButton"><button id="showPostForm">Have a GIF to post?</button></div>
    <div class="PostForm isHidden" >
          <form>
             <fieldset>
