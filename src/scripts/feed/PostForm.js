@@ -1,8 +1,25 @@
+import {sendPost} from "../data/provider.js"
+
+const applicationElement = document.querySelector("#container")
+// storing user input value to persistant state
+
 document.addEventListener(
    "click",
    (event) => {
          if (event.target.id === "saveButton") {
-            window.alert(`This will save`)
+         const userTitle = document.querySelector("input[name ='title']").value
+         const userGif = document.querySelector("input[name ='Url']").value
+         const userStory = document.querySelector("input[name ='story']").value
+
+         const postToSendToAPI = {
+               title: userTitle,
+               imageURL: userGif,
+               description: userStory,
+               timestamp: new Date().toLocaleDateString()
+         }
+         sendPost(postToSendToAPI)
+            // creates a data capture to store said events
+            //
          }
    }
 )
