@@ -71,8 +71,8 @@
     width: 130px;
     border-radius: 30%;
     flex-basis:  1;
-    margin-left: 30px;
-    margin-top: 5px;
+    margin-left: 40px;
+    margin-top: 10px;
 }
 
 #pendingMessagesCounter {
@@ -81,24 +81,18 @@
     padding: 6px; 
     border-radius: 20px;
     margin-top: 60px;
-    margin-left: 500px;
-    flex-basis: 2;
+    margin-right: 2em;
     font-family: cursive;
-    padding: 1em;
+
 }
 
-.button {
-    color: goldenrod;
-    background-color: rgb(217, 230, 243);
-    padding: 6px; 
-    border-radius: 100px;
-    font-family: cursive;
-    margin-right: 50px;
-    margin-top: 10px;
-}
 
 nav {
     display: flex;
+}
+
+.navDiv {
+    margin-left: 57em;
 }
 
 #pendingMessagesCounter:hover {
@@ -117,18 +111,22 @@ nav {
 }
 
 
-#logoutLink {
+
+.button {
     color: goldenrod;
     background-color: rgb(217, 230, 243);
-    padding: 6px; 
-    border-radius: 100px;
+    border-radius: 20px;
+    margin-top: 60px;
+    padding: .2em;
+
     font-family: cursive;
-    margin-right: 50px;
-    margin-top: 10px;
+    /* margin-left: 900px; */
 }
 
 
 #directMessageIcon {
-    height: 50px;
-    width: 50px;
+    height: 80px;
+    width: 80px;
+    padding-left: 30px;
+    margin-top: 30px;
 }
