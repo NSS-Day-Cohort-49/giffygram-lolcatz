@@ -33,6 +33,23 @@ const applicationState = {
 //         })
 // }
 
+export const sendPost = (userPost) => {
+    const fetchOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type" : "application/json" 
+        },
+        body: JSON.stringify(userPost)
+    }
+// posted code to the json
+
+return fetch(`${apiURL}/posts`, fetchOptions)
+        .then(response => response.json())
+        .then(() => {
+            applicationElement.dispatchEvent(new CustomEvent("stateChanged"))
+        })
+// posted and returned data, will trigger a re-render
+}
 
 export const fetchUsers = () => {
     return fetch(`${apiURL}/users`)
