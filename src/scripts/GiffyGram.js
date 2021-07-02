@@ -3,8 +3,22 @@ import { returnNavbar } from "./nav/Navbar.js"
 import { pendingMessages } from "./message/pendingMessages.js";
 import { renderApp } from "./main.js";
 import { giffyPosts } from "./feed/PostList.js";
+import {postForm} from "./feed/PostForm.js"
+
 
 const applicationElement = document.querySelector(".giffygram")
+
+
+
+
+
+export const GiffyGram = () => {
+
+    // Show main main UI
+    return `<h1>Giffygram</h1>${postForm()}`
+
+}
+
 
 // this state is basically a flag to let the app know if the user has visited the pendingMessagesPage
 // based on the value of this state the event below will behave differently.
